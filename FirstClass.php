@@ -1,27 +1,33 @@
 <?php
 
-  class Stoel {
+// makes the clase chair  
+class chair {
 
-    private int $zithoogte;
-    private string $kleur;
+    // these are private (not accessible outside of the class) properties (variables) 
+    private int $sitheight;
+    private string $color;
 
-    public function __construct($ingevoerdeKleur, $ingevoerdeZithoogte)
+    // this is the constructor (blueprint) of the class
+    public function __construct($inputtedcolor, $inputtedsitheight)
     {
-      $this->kleur = $ingevoerdeKleur;
-      $this->zithoogte = $ingevoerdeZithoogte;
+      $this->color = $inputtedcolor;
+      $this->sitheight = $inputtedsitheight;
     }
 
+    // this returns the color of the chair
     public function echoKleur(){
-      return "De stoel is: ".$this->kleur;
+      return "De stoel is: ".$this->color;
     }
 
+    // this returns the sitting height of the chair
     public function echoZithoogte() {
-      return "Zithoogte rode stoel: " . $this->zithoogte;
+      return "Zithoogte rode stoel: " . $this->sitheight;
     }
 
-    public function verstelZithoogte($nieuweZithoogte){
-      $this->zithoogte = $nieuweZithoogte;
-      return "Zithoogte na verstelling: " . $this->zithoogte;
+    // this changes the sitting height of the chair
+    public function verstelZithoogte($newsitheight){
+      $this->sitheight = $newsitheight;
+      return "Zithoogte na verstelling: " . $this->sitheight;
     }
 
   }
